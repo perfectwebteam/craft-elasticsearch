@@ -50,7 +50,7 @@ class Search extends CraftSearch
         // Figure out which fields to update, and which to ignore
         /** @var FieldInterface[] $updateFields */
         $updateFields = [];
-        if ($element::hasContent() && ($fieldLayout = $element->getFieldLayout()) !== null) {
+        if (($fieldLayout = $element->getFieldLayout()) !== null) {
             foreach ($fieldLayout->getCustomFields() as $field) {
                 if ($field->searchable) {
                     $updateFields[] = $field;

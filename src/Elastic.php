@@ -113,7 +113,7 @@ class Elastic extends Plugin
         });
 
         // Register utilities
-        Craft::$app->getUtilities()->on(Utilities::EVENT_REGISTER_UTILITY_TYPES, function (RegisterComponentTypesEvent $event) {
+        Craft::$app->getUtilities()->on(Utilities::EVENT_REGISTER_UTILITIES, function (RegisterComponentTypesEvent $event) {
             $event->types[] = IndexUtility::class;
         });
 
